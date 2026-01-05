@@ -1,451 +1,597 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViniDev</title>
-    <link rel="icon" href="assets/bolt-solid.svg">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description"
+        content="Portfólio de Marcos Vinicius - Desenvolvedor Full Stack | Engenharia da Computação">
+    <meta name="keywords" content="desenvolvedor, full stack, react, java, javascript, web developer">
+    <meta name="author" content="Marcos Vinicius">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Marcos Vinicius | Full Stack Developer">
+    <meta property="og:description" content="Desenvolvedor Full Stack apaixonado por criar soluções inovadoras">
+    <meta property="og:type" content="website">
+
+    <title>Marcos Vinicius | Full Stack Developer</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body class="main-content">
-    <header class="section header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="assets/WhatsApp Image 2024-04-26 at 00.09.52.jpeg" alt="">
-                </div>
-            </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Olá, Meu nome é <span>Marcos Vinicius</span>
+
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader__content">
+            <div class="loader__spinner"></div>
+            <span class="loader__text">ViniDev</span>
+        </div>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="nav" id="nav">
+        <div class="nav__logo">
+            <a href="#home">ViniDev<span>.</span></a>
+        </div>
+        <ul class="nav__menu">
+            <li><a href="#home" class="nav__link active" data-section="home">Início</a></li>
+            <li><a href="#about" class="nav__link" data-section="about">Sobre</a></li>
+            <li><a href="#skills" class="nav__link" data-section="skills">Skills</a></li>
+            <li><a href="#portfolio" class="nav__link" data-section="portfolio">Projetos</a></li>
+            <li><a href="#contact" class="nav__link" data-section="contact">Contato</a></li>
+        </ul>
+        <div class="nav__actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero__bg">
+            <div class="hero__gradient"></div>
+            <div class="hero__grid"></div>
+        </div>
+        <div class="hero__container">
+            <div class="hero__content">
+                <span class="hero__badge animate-fade-in">
+                    <span class="hero__badge-dot"></span>
+                    Disponível para projetos
+                </span>
+                <h1 class="hero__title animate-fade-in-up">
+                    <span class="hero__greeting">Olá, eu sou</span>
+                    <span class="hero__name">Marcos <span class="gradient-text">Vinicius</span></span>
                 </h1>
-                <p>
-                    I'm a tech enthusiast, always striving to deliver cutting-edge solutions. I build modern, high-performing, and secure websites using the latest technologies!
+                <div class="hero__typed-wrapper animate-fade-in-up">
+                    <span class="hero__typed-prefix">{'>'}</span>
+                    <span class="hero__typed" id="typedText"></span>
+                    <span class="hero__cursor">|</span>
+                </div>
+                <p class="hero__description animate-fade-in-up">
+                    Estudante de Engenharia da Computação apaixonado por tecnologia,
+                    criando soluções modernas e de alto desempenho.
                 </p>
-                <div class="btn-con">
-                    <a href="https://drive.google.com/file/d/1yzcDJJxZ_UDF3i2U5Ybu_RtfVgjRWX0a/view?usp=sharing" target="_blank" class="main-btn">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                <div class="hero__cta animate-fade-in-up">
+                    <a href="https://drive.google.com/file/d/1yzcDJJxZ_UDF3i2U5Ybu_RtfVgjRWX0a/view?usp=sharing"
+                        target="_blank" class="btn btn--primary">
+                        <i class="fas fa-download"></i>
+                        Download CV
+                    </a>
+                    <a href="#contact" class="btn btn--outline">
+                        <i class="fas fa-paper-plane"></i>
+                        Vamos Conversar
+                    </a>
+                </div>
+                <div class="hero__social animate-fade-in-up">
+                    <a href="https://github.com/v1nizx" target="_blank" class="hero__social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcos-vinicius-44a011259/" target="_blank"
+                        class="hero__social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/viiniciussz._/" target="_blank" class="hero__social-link"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
+            <div class="hero__image animate-fade-in">
+                <div class="hero__image-wrapper">
+                    <div class="hero__image-bg"></div>
+                    <img src="assets/perfil.jpeg" alt="Marcos Vinicius">
+                    <div class="hero__image-ring"></div>
+                </div>
+                <div class="hero__floating-cards">
+                    <div class="floating-card floating-card--1">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="floating-card floating-card--2">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="floating-card floating-card--3">
+                        <i class="fab fa-js"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
         </div>
     </header>
+
     <main>
-          <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
-                <div class="about-container">
-                    <div class="left-about">
-                        <h4>Information About me</h4>
-                        <p>
-                            I am a 21-year-old Computer Engineering student currently in my seven semester. Proficient in agile methodologies, I possess knowledge of major web development languages and technologies. I participated in the Jovemtech program at Pulse, the largest technology development hub in my state. As the project manager of Technos, my course's junior company, I have a strong affinity for technology and a constant desire to learn.
-                        </p>
-                        <div class="btn-con">
-                            <a href="https://drive.google.com/file/d/1yzcDJJxZ_UDF3i2U5Ybu_RtfVgjRWX0a/view?usp=sharing" target="_blank" class="main-btn">
-                                <span class="btn-text">Download CV</span>
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Sobre Mim</span>
+                    <h2 class="section__title">Conhecendo um pouco da minha <span class="gradient-text">história</span>
+                    </h2>
+                </div>
+                <div class="about__content">
+                    <div class="about__text">
+                        <div class="about__card glass-card">
+                            <div class="about__intro">
+                                <h3>Quem sou eu?</h3>
+                                <p>
+                                    Tenho 21 anos e sou estudante de Engenharia da Computação, atualmente no oitavo
+                                    semestre.
+                                    Proficiente em metodologias ágeis, possuo conhecimento das principais linguagens e
+                                    tecnologias de desenvolvimento web.
+                                </p>
+                                <p>
+                                    Participei do programa Jovemtech da Pulse, o maior hall de desenvolvimento quando se
+                                    fala em tecnologia no meu estado, sou também gestor de projetos na Empresa Jr do meu
+                                    curso de computação na UEMA.
+                                    Tenho afinidade com tecnologia e vontade de aprender cada vez mais!
+                                </p>
+                            </div>
+                            <div class="about__stats">
+                                <div class="about__stat">
+                                    <span class="about__stat-number" data-count="3">0</span>
+                                    <span class="about__stat-label">Anos de Experiência</span>
+                                </div>
+                                <div class="about__stat">
+                                    <span class="about__stat-number" data-count="10">0</span>
+                                    <span class="about__stat-label">Projetos Completos</span>
+                                </div>
+                                <div class="about__stat">
+                                    <span class="about__stat-number" data-count="6">0</span>
+                                    <span class="about__stat-label">Tecnologias</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__timeline">
+                        <h3 class="about__timeline-title">
+                            <i class="fas fa-route"></i>
+                            Minha Jornada
+                        </h3>
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <div class="timeline__dot"></div>
+                                <div class="timeline__content glass-card">
+                                    <span class="timeline__date">2022 - Presente</span>
+                                    <h4>Estudante de Engenharia</h4>
+                                    <span class="timeline__company">UEMA</span>
+                                    <p>Cursando Engenharia da Computação com foco em desenvolvimento de software e
+                                        hardware.</p>
+                                </div>
+                            </div>
+                            <div class="timeline__item">
+                                <div class="timeline__dot"></div>
+                                <div class="timeline__content glass-card">
+                                    <span class="timeline__date">2023 - Presente</span>
+                                    <h4>Gerente de Projetos</h4>
+                                    <span class="timeline__company">Technos Jr</span>
+                                    <p>Supervisiono todas as atividades da empresa, gerenciando projetos de hardware e
+                                        software.</p>
+                                </div>
+                            </div>
+                            <div class="timeline__item">
+                                <div class="timeline__dot"></div>
+                                <div class="timeline__content glass-card">
+                                    <span class="timeline__date">2025 - Presente</span>
+                                    <h4>Desenvolvedor de Sistemas e analista</h4>
+                                    <span class="timeline__company">Tribunal de Contas do Maranhão</span>
+                                    <p>Atuo junto com um time no desenvolvimento e aprimoramento de funcionalidades,
+                                        para melhorar a analise de dados das contas do estado.</p>
+                                </div>
+                            </div>
+                            <div class="timeline__item">
+                                <div class="timeline__dot"></div>
+                                <div class="timeline__content glass-card">
+                                    <span class="timeline__date">7 meses</span>
+                                    <h4>Desenvolvedor de Software</h4>
+                                    <span class="timeline__company">Pulse</span>
+                                    <p>Participei do programa Jovemtech no maior hub de desenvolvimento tecnológico do
+                                        estado.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <h4 class="stat-title">My Skills</h4>
-                    <div class="progress-bars">
-                        <div class="progress-bar">
-                            <p class="prog-title">html5</p>
-                            <div class="progress-con">
-                                <p class="prog-text">80%</p>
-                                <div class="progress">
-                                    <span class="html"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-bar">
-                            <p class="prog-title">css3</p>
-                            <div class="progress-con">
-                                <p class="prog-text">80%</p>
-                                <div class="progress">
-                                    <span class="css"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-bar">
-                            <p class="prog-title">javascript</p>
-                            <div class="progress-con">
-                                <p class="prog-text">80%</p>
-                                <div class="progress">
-                                    <span class="js"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-bar">
-                            <p class="prog-title">ReactJS</p>
-                            <div class="progress-con">
-                                <p class="prog-text">80%</p>
-                                <div class="progress">
-                                    <span class="react"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-bar">
-                            <p class="prog-title">Java</p>
-                            <div class="progress-con">
-                                <p class="prog-text">70%</p>
-                                <div class="progress">
-                                    <span class="node"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-bar">
-                            <p class="prog-title">MySql</p>
-                            <div class="progress-con">
-                                <p class="prog-text">50%</p>
-                                <div class="progress">
-                                    <span class="python"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h4 class="stat-title">My Timeline</h4>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <p class="tl-duration">2022 - present</p>
-                    <h5>Student<span> - UEMA</span></h5>
-                    <p>
-                        As a Computer Engineering student, I'm thrilled by the field. I'm equally interested in hardware and software.                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2023 - present</p>
-                    <h5>Project manager<span> - Technos Jr</span></h5>
-                    <p>
-                        As a project manager, I oversee all company activities. Any hardware or software request must be channeled through me.                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">7 months</p>
-                    <h5>Software Developer<span> - Pulse</span></h5>
-                    <p>
-                        I had the opportunity to participate in the Jovemtech program at Pulse, the leading technology development center in my state.                  </p>
-                </div>
-                <!--<div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2009 - 2013</p>
-                    <h5>Business Degree<span> - Sussex University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>-->
             </div>
-       </section> 
-        <section class="container" id="portfolio">
-                <div class="main-title">
-                    <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
-                </div>
-                <p class="port-text">
-                    Here is some of my work that I've done in various programming languages.
-                </p>
-                <div class="portfolios">
-                    <div class="portfolio-item">
-                        <div class="image">
-                            <img src="assets/image 1.png" alt="">
-                        </div>
-                        <div class="hover-items">
-                            <h3>Project Fokus</h3>
-                            <div class="icons">
-                                <a href="https://github.com/v1nizx/projeto_Fokus.git" target="_blank" class="icon">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://projeto-fokus-mu.vercel.app/" target="_blank" class="icon">
-                                    <i class="fa-solid fa-play"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="image">
-                            <img src="assets/image 2.png" alt="">
-                        </div>
-                        <div class="hover-items">
-                            <h3>Project Alura Midi</h3>
-                            <div class="icons">
-                                <a href="https://github.com/v1nizx/alura_midi.git" target="_blank" class="icon">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://alura-midi-seven-blue.vercel.app/" class="icon">
-                                    <i class="fa-solid fa-play"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="image">
-                            <img src="assets/image 3.png" alt="">
-                        </div>
-                        <div class="hover-items">
-                            <h3>Project Table Fipe</h3>
-                            <div class="icons">
-                                <a href="https://github.com/v1nizx/tabelafipeapi_java" target="_blank" class="icon">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="image">
-                            <img src="assets/image 4.png" alt="">
-                        </div>
-                        <div class="hover-items">
-                            <h3>Project Car Recommendation</h3>
-                            <div class="icons">
-                                <a href="https://github.com/v1nizx/projeto-imersao-alura" class="icon">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://recomendacao-de-carros.vercel.app/" class="icon">
-                                    <i class="fa-solid fa-play"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="image">
-                            <img src="assets/screenmatch.png" alt="">
-                        </div>
-                        <div class="hover-items">
-                            <h3>Project Screen-Match</h3>
-                            <div class="icons">
-                                <a href="https://github.com/v1nizx/screenmatch" class="icon">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="image">
-                            <img src="assets/portifolio 1.png" alt="">
-                        </div>
-                        <div class="hover-items">
-                            <h3>Project Portifolio HTML</h3>
-                            <div class="icons">
-                                <a href="https://github.com/v1nizx/projeto_html" class="icon">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
         </section>
-      <!-- <section class="container" id="blogs">
-                <div class="blogs-content">
-                    <div class="main-title">
-                        <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
+
+        <!-- Skills Section -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Habilidades</span>
+                    <h2 class="section__title">Tecnologias e <span class="gradient-text">ferramentas</span></h2>
+                </div>
+                <div class="skills__grid">
+                    <div class="skill-card glass-card" data-skill="html">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h4 class="skill-card__title">HTML5</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="90"></div>
+                        </div>
+                        <span class="skill-card__level">Avançado</span>
                     </div>
-                    <div class="blogs">
-                        <div class="blog">
-                            <img src="img/port6.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    How to Create Your Own Website
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                </p>
-                            </div>
+                    <div class="skill-card glass-card" data-skill="css">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-css3-alt"></i>
                         </div>
-                        <div class="blog">
-                            <img src="img/blog1.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    How to Become an Expert in Web Design
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                </p>
-                            </div>
+                        <h4 class="skill-card__title">CSS3</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="85"></div>
                         </div>
-                        <div class="blog">
-                            <img src="img/blog2.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    Become a Web Designer in 10 Days
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                </p>
-                            </div>
+                        <span class="skill-card__level">Avançado</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="js">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-js"></i>
                         </div>
-                        <div class="blog">
-                            <img src="img/blog3.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    Debbuging made easy with Web Inspector
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                </p>
-                            </div>
+                        <h4 class="skill-card__title">JavaScript</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="80"></div>
                         </div>
-                        <div class="blog">
-                            <img src="img/port1.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    Get started with Web Design and UI Design
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                </p>
-                            </div>
+                        <span class="skill-card__level">Avançado</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="c++">
+                        <div class="skill-card__icon">
+                            <i class="fas fa-code"></i>
                         </div>
-                        <div class="blog">
-                            <img src="img/port3.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    This is what you need to know about Web Design
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                </p>
-                            </div>
+                        <h4 class="skill-card__title">C++</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="60"></div>
                         </div>
+                        <span class="skill-card__level">Intermediário</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="react">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h4 class="skill-card__title">React</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="75"></div>
+                        </div>
+                        <span class="skill-card__level">Intermediário</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="java">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h4 class="skill-card__title">Java</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="70"></div>
+                        </div>
+                        <span class="skill-card__level">Intermediário</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="mysql">
+                        <div class="skill-card__icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4 class="skill-card__title">MySQL</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="65"></div>
+                        </div>
+                        <span class="skill-card__level">Intermediário</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="git">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h4 class="skill-card__title">Git</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="80"></div>
+                        </div>
+                        <span class="skill-card__level">Avançado</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="nodejs">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h4 class="skill-card__title">Node.js</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="60"></div>
+                        </div>
+                        <span class="skill-card__level">Intermediário</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="python">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h4 class="skill-card__title">Python</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="60"></div>
+                        </div>
+                        <span class="skill-card__level">Intermediário</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="typescript">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h4 class="skill-card__title">TypeScript</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="60"></div>
+                        </div>
+                        <span class="skill-card__level">Avançado</span>
+                    </div>
+                    <div class="skill-card glass-card" data-skill="docker">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <h4 class="skill-card__title">Docker</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="60"></div>
+                        </div>
+                        <span class="skill-card__level">Intermediário</span>
                     </div>
                 </div>
-        </section>-->
-        <section class="container contact" id="contact">
-              <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="section portfolio" id="portfolio">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Portfólio</span>
+                    <h2 class="section__title">Meus <span class="gradient-text">projetos</span></h2>
+                    <p class="section__subtitle">Alguns dos trabalhos que desenvolvi utilizando diversas tecnologias</p>
                 </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact me here</h4>
-                        <p>
-                            Did you like what you saw? Are you interested in any of these services? Please don't hesitate to contact me. I look forward to hearing from you.
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
+                <div class="portfolio__filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-layer-group"></i>
+                        Todos
+                    </button>
+                    <button class="filter-btn" data-filter="web">
+                        <i class="fas fa-globe"></i>
+                        Web
+                    </button>
+                    <button class="filter-btn" data-filter="react">
+                        <i class="fab fa-react"></i>
+                        React
+                    </button>
+                </div>
+                <div class="portfolio__grid">
+                    <article class="project-card" data-category="web react">
+                        <div class="project-card__image">
+                            <img src="assets/img1.png" alt="Repositorio Digital">
+                            <div class="project-card__overlay">
+                                <div class="project-card__actions">
+                                    <a href="https://github.com/v1nizx/repositorio-prog-uema" target="_blank"
+                                        class="project-card__btn" aria-label="Ver código">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://repo-proguema.vercel.app/" target="_blank"
+                                        class="project-card__btn" aria-label="Ver demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
                                 </div>
-                                <p>
-                                    : São Luis, Maranhão
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>: marcosviniciusmoraisrios117@gmail.com</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>
-                                    <span>: Universidade Estadual do Maranhão</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>: (98)98571-8468</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>: Portuguese, English</span>
-                                </p>
                             </div>
                         </div>
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="https://www.linkedin.com/in/marcos-vinicius-44a011259/" target="_blank">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                 </a>
-                                <a href="https://www.instagram.com/viiniciussz._/" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                                <a href="https://github.com/v1nizx" target="_blank">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Repositorio PROG</h3>
+                            <p class="project-card__description">O Sistema PROG é uma aplicação web de ponta construída com as tecnologias mais modernas para gestão centralizada de documentos acadêmicos.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">Typescript</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-category="web">
+                        <div class="project-card__image">
+                            <img src="assets/img2.png" alt="Date App">
+                            <div class="project-card__overlay">
+                                <div class="project-card__actions">
+                                    <a href="https://github.com/v1nizx/dateapp" target="_blank"
+                                        class="project-card__btn" aria-label="Ver código">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://dateapp-ochre.vercel.app/" target="_blank"
+                                        class="project-card__btn" aria-label="Ver demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Date App</h3>
+                            <p class="project-card__description">Uma aplicação web para casais descobrirem lugares especiais para seus encontros! Sem indecisão, sem rotina - apenas experiências incríveis esperando por vocês.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">React</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-category="Typescript">
+                        <div class="project-card__image">
+                            <img src="assets/img3.png" alt="ComparAuto">
+                            <div class="project-card__overlay">
+                                <div class="project-card__actions">
+                                    <a href="https://github.com/thera-org/ComparAuto" target="_blank"
+                                        class="project-card__btn" aria-label="Ver código">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://comparauto.vercel.app/" target="_blank"
+                                        class="project-card__btn" aria-label="Ver demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">ComparAuto</h3>
+                            <p class="project-card__description">Uma plataforma moderna para comparar preços de serviços automotivos, conectando clientes a oficinas especializadas.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">Typescript</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Contato</span>
+                    <h2 class="section__title">Vamos <span class="gradient-text">trabalhar juntos?</span></h2>
+                    <p class="section__subtitle">Estou disponível para novos projetos e oportunidades</p>
+                </div>
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <div class="contact__card glass-card">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h4>Localização</h4>
+                                <p>São Luís, Maranhão</p>
+                            </div>
+                        </div>
+                        <div class="contact__card glass-card">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h4>Email</h4>
+                                <a
+                                    href="mailto:marcosviniciusmoraisrios117@gmail.com">marcosviniciusmoraisrios117@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact__card glass-card">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h4>Telefone</h4>
+                                <a href="tel:+5598985718468">(98) 98571-8468</a>
+                            </div>
+                        </div>
+                        <div class="contact__social">
+                            <h4>Me siga nas redes</h4>
+                            <div class="contact__social-links">
+                                <a href="https://github.com/v1nizx" target="_blank" class="social-link"
+                                    aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
+                                <a href="https://www.linkedin.com/in/marcos-vinicius-44a011259/" target="_blank"
+                                    class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.instagram.com/viiniciussz._/" target="_blank" class="social-link"
+                                    aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="right-contact">
-                        <form action="" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="email" required placeholder="YOUR EMAIL">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
-                            </div>
-                            <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <a href="https://drive.google.com/file/d/1yzcDJJxZ_UDF3i2U5Ybu_RtfVgjRWX0a/view?usp=sharing" target="_blank" class="main-btn">
-                                    <span class="btn-text">Download CV</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-                                </a>
-                            </div>
-                        </form>
-                    </div>
+                    <form class="contact__form glass-card" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                            <span class="form-group__icon"><i class="fas fa-user"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            <span class="form-group__icon"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" required>
+                            <span class="form-group__icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem..."
+                                required></textarea>
+                            <span class="form-group__icon"><i class="fas fa-comment-alt"></i></span>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
                 </div>
-             </div>
-       </section>
+            </div>
+        </section>
     </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home">
-            <i class="fa-solid fa-house"></i>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="#home">ViniDev<span>.</span></a>
+                    <p>Desenvolvendo o futuro, uma linha de código por vez.</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#portfolio">Projetos</a>
+                    <a href="#contact">Contato</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Marcos Vinicius. Todos os direitos reservados.</p>
+                <p>Feito com <i class="fas fa-heart"></i> e muito <i class="fas fa-coffee"></i></p>
+            </div>
         </div>
-        <div class="control" data-id="about">
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fa-solid fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fa-solid fa-envelope-open"></i> 
-        </div>
-    </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="app.js"></script>
 </body>
+
 </html>
