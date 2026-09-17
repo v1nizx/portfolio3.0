@@ -16,7 +16,7 @@
 
     <title>Marcos Vinicius | Full Stack Developer</title>
 
-    <!-- Fonts -->
+    <!-- Typography (Apple SF Pro fallback / Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,74 +26,67 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- Styles -->
+    <!-- Apple Design System Styles -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-    <!-- Cursor personalizado -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <!-- Floating Dynamic Island Navigation Bar -->
+    <header class="nav-wrapper">
+        <nav class="nav" id="nav">
+            <div class="nav__logo">
+                <a href="#home">ViniDev<span>.</span></a>
+            </div>
+            <div class="nav__segmented">
+                <div class="nav__pill-indicator" id="navPillIndicator"></div>
+                <ul class="nav__menu" id="navMenu">
+                    <li><a href="#home" class="nav__link active" data-section="home">Início</a></li>
+                    <li><a href="#about" class="nav__link" data-section="about">Sobre</a></li>
+                    <li><a href="#skills" class="nav__link" data-section="skills">Skills</a></li>
+                    <li><a href="#portfolio" class="nav__link" data-section="portfolio">Projetos</a></li>
+                    <li><a href="#contact" class="nav__link" data-section="contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="nav__toggle" id="navToggle" aria-label="Menu de navegação">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="loader__content">
-            <div class="loader__spinner"></div>
-            <span class="loader__text">ViniDev</span>
-        </div>
-    </div>
-
-    <!-- Navegação -->
-    <nav class="nav" id="nav">
-        <div class="nav__logo">
-            <a href="#home">ViniDev<span>.</span></a>
-        </div>
-        <ul class="nav__menu">
-            <li><a href="#home" class="nav__link active" data-section="home">Início</a></li>
-            <li><a href="#about" class="nav__link" data-section="about">Sobre</a></li>
-            <li><a href="#skills" class="nav__link" data-section="skills">Skills</a></li>
-            <li><a href="#portfolio" class="nav__link" data-section="portfolio">Projetos</a></li>
-            <li><a href="#contact" class="nav__link" data-section="contact">Contato</a></li>
-        </ul>
-        <div class="nav__actions">
-            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-            </button>
-            <button class="nav__toggle" id="navToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
+    <!-- Hero Section (Apple Keynote Presentation) -->
     <header class="hero" id="home">
-        <div class="hero__bg">
-            <div class="hero__gradient"></div>
-            <div class="hero__grid"></div>
+        <div class="hero__ambient">
+            <div class="hero__ambient-glow hero__ambient-glow--1"></div>
+            <div class="hero__ambient-glow hero__ambient-glow--2"></div>
         </div>
-        <div class="hero__container">
+        <div class="container hero__container">
             <div class="hero__content">
-                <span class="hero__badge animate-fade-in">
+                <span class="hero__badge">
                     <span class="hero__badge-dot"></span>
                     Disponível para projetos
                 </span>
-                <h1 class="hero__title animate-fade-in-up">
+                <h1 class="hero__title">
                     <span class="hero__greeting">Olá, eu sou</span>
-                    <span class="hero__name">Marcos <span class="gradient-text">Vinicius</span></span>
+                    <span class="hero__name">Marcos <span class="apple-gradient-text">Vinicius</span></span>
                 </h1>
-                <div class="hero__typed-wrapper animate-fade-in-up">
+                <div class="hero__typed-wrapper">
                     <span class="hero__typed-prefix">{'>'}</span>
                     <span class="hero__typed" id="typedText"></span>
                     <span class="hero__cursor">|</span>
                 </div>
-                <p class="hero__description animate-fade-in-up">
+                <p class="hero__description">
                     Estudante de Engenharia da Computação apaixonado por tecnologia,
                     criando soluções modernas e de alto desempenho.
                 </p>
-                <div class="hero__cta animate-fade-in-up">
+                <div class="hero__cta">
                     <a href="https://drive.google.com/file/d/1yzcDJJxZ_UDF3i2U5Ybu_RtfVgjRWX0a/view?usp=sharing"
                         target="_blank" class="btn btn--primary">
                         <i class="fas fa-download"></i>
@@ -104,34 +97,32 @@
                         Vamos Conversar
                     </a>
                 </div>
-                <div class="hero__social animate-fade-in-up">
-                    <a href="https://github.com/v1nizx" target="_blank" class="hero__social-link" aria-label="GitHub">
+                <div class="hero__social">
+                    <a href="https://github.com/v1nizx" target="_blank" class="hero__social-link" aria-label="GitHub" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/marcos-vinicius-44a011259/" target="_blank"
-                        class="hero__social-link" aria-label="LinkedIn">
+                        class="hero__social-link" aria-label="LinkedIn" title="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.instagram.com/viiniciussz._/" target="_blank" class="hero__social-link"
-                        aria-label="Instagram">
+                        aria-label="Instagram" title="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
-            <div class="hero__image animate-fade-in">
-                <div class="hero__image-wrapper">
-                    <div class="hero__image-bg"></div>
+            <div class="hero__stage">
+                <div class="hero__image-wrapper" id="heroImageCard">
                     <img src="assets/perfil.jpeg" alt="Marcos Vinicius">
-                    <div class="hero__image-ring"></div>
                 </div>
                 <div class="hero__floating-cards">
-                    <div class="floating-card floating-card--1">
+                    <div class="floating-card floating-card--1" title="React">
                         <i class="fab fa-react"></i>
                     </div>
-                    <div class="floating-card floating-card--2">
+                    <div class="floating-card floating-card--2" title="Java">
                         <i class="fab fa-java"></i>
                     </div>
-                    <div class="floating-card floating-card--3">
+                    <div class="floating-card floating-card--3" title="JavaScript">
                         <i class="fab fa-js"></i>
                     </div>
                 </div>
@@ -144,49 +135,41 @@
     </header>
 
     <main>
-        <!-- About Section -->
+        <!-- About Section (Apple Bento Grid) -->
         <section class="section about" id="about">
             <div class="container">
                 <div class="section__header">
                     <span class="section__tag">Sobre Mim</span>
-                    <h2 class="section__title">Conhecendo um pouco da minha <span class="gradient-text">história</span>
-                    </h2>
+                    <h2 class="section__title">Conhecendo um pouco da minha <span class="apple-gradient-text">história</span></h2>
+                    <p class="section__subtitle">Trajetória acadêmica, gestão de tecnologia e experiência em desenvolvimento</p>
                 </div>
-                <div class="about__content">
-                    <div class="about__text">
-                        <div class="about__card glass-card">
-                            <div class="about__intro">
-                                <h3>Quem sou eu?</h3>
-                                <p>
-                                    Tenho 21 anos e sou estudante de Engenharia da Computação, atualmente no oitavo
-                                    semestre.
-                                    Proficiente em metodologias ágeis, possuo conhecimento das principais linguagens e
-                                    tecnologias de desenvolvimento web.
-                                </p>
-                                <p>
-                                    Participei do programa Jovemtech da Pulse, o maior hall de desenvolvimento quando se
-                                    fala em tecnologia no meu estado, sou também gestor de projetos na Empresa Jr do meu
-                                    curso de computação na UEMA.
-                                    Tenho afinidade com tecnologia e vontade de aprender cada vez mais!
-                                </p>
+                <div class="about__bento-grid">
+                    <div class="about__card apple-glass">
+                        <div class="about__intro">
+                            <h3>Quem sou eu?</h3>
+                            <p>
+                                Tenho 22 anos e sou Estudante de Engenharia da Computação e Desenvolvedor de Sistemas, com experiência prática em desenvolvimento e suporte de TI em órgãos públicos.
+                            </p>
+                            <p>
+                                 Atuo no desenvolvimento e aprimoramento de funcionalidades para análise de dados, apoiando a tomada de decisão. Tenho conhecimentos em JavaScript, Python, SQL, APIs, HTML/CSS, Git/GitHub, bancos de dados, UI/UX, Design Thinking e metodologias ágeis, além de vivência com suporte a usuários e infraestrutura de redes. Busco oportunidade em TI ou desenvolvimento para evoluir tecnicamente e, no futuro, atuar como desenvolvedor, analista ou supervisor de TI..
+                            </p>
+                        </div>
+                        <div class="about__stats">
+                            <div class="about__stat">
+                                <span class="about__stat-number" data-count="3">0</span>
+                                <span class="about__stat-label">Anos de Experiência</span>
                             </div>
-                            <div class="about__stats">
-                                <div class="about__stat">
-                                    <span class="about__stat-number" data-count="3">0</span>
-                                    <span class="about__stat-label">Anos de Experiência</span>
-                                </div>
-                                <div class="about__stat">
-                                    <span class="about__stat-number" data-count="10">0</span>
-                                    <span class="about__stat-label">Projetos Completos</span>
-                                </div>
-                                <div class="about__stat">
-                                    <span class="about__stat-number" data-count="6">0</span>
-                                    <span class="about__stat-label">Tecnologias</span>
-                                </div>
+                            <div class="about__stat">
+                                <span class="about__stat-number" data-count="10">0</span>
+                                <span class="about__stat-label">Projetos Concluídos</span>
+                            </div>
+                            <div class="about__stat">
+                                <span class="about__stat-number" data-count="12">0</span>
+                                <span class="about__stat-label">Tecnologias Dominadas</span>
                             </div>
                         </div>
                     </div>
-                    <div class="about__timeline">
+                    <div class="about__timeline-card apple-glass">
                         <h3 class="about__timeline-title">
                             <i class="fas fa-route"></i>
                             Minha Jornada
@@ -194,42 +177,38 @@
                         <div class="timeline">
                             <div class="timeline__item">
                                 <div class="timeline__dot"></div>
-                                <div class="timeline__content glass-card">
+                                <div class="timeline__content">
                                     <span class="timeline__date">2022 - Presente</span>
-                                    <h4>Estudante de Engenharia</h4>
+                                    <h4>Engenharia da Computação</h4>
                                     <span class="timeline__company">UEMA</span>
-                                    <p>Cursando Engenharia da Computação com foco em desenvolvimento de software e
-                                        hardware.</p>
+                                    <p>Foco em desenvolvimento de software, arquitetura de sistemas e hardware.</p>
                                 </div>
                             </div>
                             <div class="timeline__item">
                                 <div class="timeline__dot"></div>
-                                <div class="timeline__content glass-card">
-                                    <span class="timeline__date">2023 - Presente</span>
+                                <div class="timeline__content">
+                                    <span class="timeline__date">2023 - 2026</span>
                                     <h4>Gerente de Projetos</h4>
                                     <span class="timeline__company">Technos Jr</span>
-                                    <p>Supervisiono todas as atividades da empresa, gerenciando projetos de hardware e
-                                        software.</p>
+                                    <p>Supervisão técnica, liderança de squads e entrega de soluções inovadoras.</p>
                                 </div>
                             </div>
                             <div class="timeline__item">
                                 <div class="timeline__dot"></div>
-                                <div class="timeline__content glass-card">
+                                <div class="timeline__content">
                                     <span class="timeline__date">2025 - Presente</span>
-                                    <h4>Desenvolvedor de Sistemas e analista</h4>
+                                    <h4>Desenvolvedor e Analista de Sistemas</h4>
                                     <span class="timeline__company">Tribunal de Contas do Maranhão</span>
-                                    <p>Atuo junto com um time no desenvolvimento e aprimoramento de funcionalidades,
-                                        para melhorar a analise de dados das contas do estado.</p>
+                                    <p>Desenvolvimento e sustentação de ferramentas para auditoria e análise de dados públicos.</p>
                                 </div>
                             </div>
                             <div class="timeline__item">
                                 <div class="timeline__dot"></div>
-                                <div class="timeline__content glass-card">
+                                <div class="timeline__content">
                                     <span class="timeline__date">7 meses</span>
                                     <h4>Desenvolvedor de Software</h4>
-                                    <span class="timeline__company">Pulse</span>
-                                    <p>Participei do programa Jovemtech no maior hub de desenvolvimento tecnológico do
-                                        estado.</p>
+                                    <span class="timeline__company">Pulse (Jovemtech)</span>
+                                    <p>Imersão prática acelerada com projetos reais no polo tecnológico regional.</p>
                                 </div>
                             </div>
                         </div>
@@ -238,198 +217,216 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Skills Section (Apple Bento Capabilities) -->
         <section class="section skills" id="skills">
             <div class="container">
                 <div class="section__header">
                     <span class="section__tag">Habilidades</span>
-                    <h2 class="section__title">Tecnologias e <span class="gradient-text">ferramentas</span></h2>
+                    <h2 class="section__title">Tecnologias e <span class="apple-gradient-text">ferramentas</span></h2>
+                    <p class="section__subtitle">Conjunto de ferramentas aplicadas na criação de produtos robustos e escaláveis</p>
                 </div>
                 <div class="skills__grid">
-                    <div class="skill-card glass-card" data-skill="html">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-html5"></i>
-                        </div>
-                        <h4 class="skill-card__title">HTML5</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="90"></div>
-                        </div>
-                        <span class="skill-card__level">Avançado</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="css">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <h4 class="skill-card__title">CSS3</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="85"></div>
-                        </div>
-                        <span class="skill-card__level">Avançado</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="js">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <h4 class="skill-card__title">JavaScript</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="80"></div>
-                        </div>
-                        <span class="skill-card__level">Avançado</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="c++">
-                        <div class="skill-card__icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h4 class="skill-card__title">C++</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="60"></div>
-                        </div>
-                        <span class="skill-card__level">Intermediário</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="react">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-react"></i>
+                    <div class="skill-card apple-glass" data-skill="react">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-react"></i></div>
+                            <span class="skill-card__level">Avançado</span>
                         </div>
                         <h4 class="skill-card__title">React</h4>
                         <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="75"></div>
+                            <div class="skill-card__progress" data-progress="85"></div>
                         </div>
-                        <span class="skill-card__level">Intermediário</span>
                     </div>
-                    <div class="skill-card glass-card" data-skill="java">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-java"></i>
-                        </div>
-                        <h4 class="skill-card__title">Java</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="70"></div>
-                        </div>
-                        <span class="skill-card__level">Intermediário</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="mysql">
-                        <div class="skill-card__icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h4 class="skill-card__title">MySQL</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="65"></div>
-                        </div>
-                        <span class="skill-card__level">Intermediário</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="git">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-git-alt"></i>
-                        </div>
-                        <h4 class="skill-card__title">Git</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="80"></div>
-                        </div>
-                        <span class="skill-card__level">Avançado</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="nodejs">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-node-js"></i>
-                        </div>
-                        <h4 class="skill-card__title">Node.js</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="60"></div>
-                        </div>
-                        <span class="skill-card__level">Intermediário</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="python">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <h4 class="skill-card__title">Python</h4>
-                        <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="60"></div>
-                        </div>
-                        <span class="skill-card__level">Intermediário</span>
-                    </div>
-                    <div class="skill-card glass-card" data-skill="typescript">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-js"></i>
+
+                    <div class="skill-card apple-glass" data-skill="typescript">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-js"></i></div>
+                            <span class="skill-card__level">Avançado</span>
                         </div>
                         <h4 class="skill-card__title">TypeScript</h4>
                         <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="60"></div>
+                            <div class="skill-card__progress" data-progress="80"></div>
                         </div>
-                        <span class="skill-card__level">Avançado</span>
                     </div>
-                    <div class="skill-card glass-card" data-skill="docker">
-                        <div class="skill-card__icon">
-                            <i class="fab fa-docker"></i>
+
+                    <div class="skill-card apple-glass" data-skill="js">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-js-square"></i></div>
+                            <span class="skill-card__level">Avançado</span>
+                        </div>
+                        <h4 class="skill-card__title">JavaScript</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="nodejs">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-node-js"></i></div>
+                            <span class="skill-card__level">Intermediário</span>
+                        </div>
+                        <h4 class="skill-card__title">Node.js</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="75"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="java">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-java"></i></div>
+                            <span class="skill-card__level">Intermediário</span>
+                        </div>
+                        <h4 class="skill-card__title">Java</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="75"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="python">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-python"></i></div>
+                            <span class="skill-card__level">Intermediário</span>
+                        </div>
+                        <h4 class="skill-card__title">Python</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="70"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="c++">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fas fa-code"></i></div>
+                            <span class="skill-card__level">Intermediário</span>
+                        </div>
+                        <h4 class="skill-card__title">C++</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="65"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="mysql">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fas fa-database"></i></div>
+                            <span class="skill-card__level">Intermediário</span>
+                        </div>
+                        <h4 class="skill-card__title">MySQL</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="70"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="docker">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-docker"></i></div>
+                            <span class="skill-card__level">Intermediário</span>
                         </div>
                         <h4 class="skill-card__title">Docker</h4>
                         <div class="skill-card__bar">
-                            <div class="skill-card__progress" data-progress="60"></div>
+                            <div class="skill-card__progress" data-progress="65"></div>
                         </div>
-                        <span class="skill-card__level">Intermediário</span>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="git">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-git-alt"></i></div>
+                            <span class="skill-card__level">Avançado</span>
+                        </div>
+                        <h4 class="skill-card__title">Git</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="html">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-html5"></i></div>
+                            <span class="skill-card__level">Avançado</span>
+                        </div>
+                        <h4 class="skill-card__title">HTML5</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="95"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card apple-glass" data-skill="css">
+                        <div class="skill-card__header">
+                            <div class="skill-card__icon"><i class="fab fa-css3-alt"></i></div>
+                            <span class="skill-card__level">Avançado</span>
+                        </div>
+                        <h4 class="skill-card__title">CSS3</h4>
+                        <div class="skill-card__bar">
+                            <div class="skill-card__progress" data-progress="90"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
+        <!-- Portfolio Section (Apple Showcase) -->
         <section class="section portfolio" id="portfolio">
             <div class="container">
                 <div class="section__header">
                     <span class="section__tag">Portfólio</span>
-                    <h2 class="section__title">Meus <span class="gradient-text">projetos</span></h2>
-                    <p class="section__subtitle">Alguns dos trabalhos que desenvolvi utilizando diversas tecnologias</p>
+                    <h2 class="section__title">Meus <span class="apple-gradient-text">projetos</span></h2>
+                    <p class="section__subtitle">Alguns dos trabalhos em destaque com código limpo e arquitetura moderna</p>
                 </div>
+
+                <!-- Apple Segmented Control for Filters -->
                 <div class="portfolio__filters">
-                    <button class="filter-btn active" data-filter="all">
-                        <i class="fas fa-layer-group"></i>
-                        Todos
-                    </button>
-                    <button class="filter-btn" data-filter="web">
-                        <i class="fas fa-globe"></i>
-                        Web
-                    </button>
-                    <button class="filter-btn" data-filter="react">
-                        <i class="fab fa-react"></i>
-                        React
-                    </button>
+                    <div class="apple-segmented-control" id="portfolioFilter">
+                        <div class="segmented-indicator" id="filterIndicator"></div>
+                        <button class="segmented-btn filter-btn active" data-filter="all">
+                            <i class="fas fa-layer-group"></i> Todos
+                        </button>
+                        <button class="segmented-btn filter-btn" data-filter="web">
+                            <i class="fas fa-globe"></i> Web
+                        </button>
+                        <button class="segmented-btn filter-btn" data-filter="react">
+                            <i class="fab fa-react"></i> React
+                        </button>
+                    </div>
                 </div>
+
                 <div class="portfolio__grid">
                     <article class="project-card" data-category="web react">
                         <div class="project-card__image">
-                            <img src="assets/img1.png" alt="Repositorio Digital">
+                            <img src="assets/img1.png" alt="Repositório Digital PROG">
                             <div class="project-card__overlay">
                                 <div class="project-card__actions">
                                     <a href="https://github.com/v1nizx/repositorio-prog-uema" target="_blank"
-                                        class="project-card__btn" aria-label="Ver código">
+                                        class="project-card__btn" aria-label="Ver repositório no GitHub" title="Ver código">
                                         <i class="fab fa-github"></i>
                                     </a>
                                     <a href="https://repo-proguema.vercel.app/" target="_blank"
-                                        class="project-card__btn" aria-label="Ver demo">
+                                        class="project-card__btn" aria-label="Ver demonstração ao vivo" title="Demo ao vivo">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card__content">
-                            <h3 class="project-card__title">Repositorio PROG</h3>
-                            <p class="project-card__description">O Sistema PROG é uma aplicação web de ponta construída com as tecnologias mais modernas para gestão centralizada de documentos acadêmicos.</p>
+                            <h3 class="project-card__title">Repositório PROG</h3>
+                            <p class="project-card__description">
+                                Plataforma web de alta performance construída para a gestão acadêmica centralizada de documentos e arquivos institucionais.
+                            </p>
                             <div class="project-card__tags">
-                                <span class="tag">Typescript</span>
+                                <span class="tag">TypeScript</span>
                                 <span class="tag">React</span>
                                 <span class="tag">Node.js</span>
                             </div>
                         </div>
                     </article>
-                    <article class="project-card" data-category="web">
+
+                    <article class="project-card" data-category="web react">
                         <div class="project-card__image">
                             <img src="assets/img2.png" alt="Date App">
                             <div class="project-card__overlay">
                                 <div class="project-card__actions">
                                     <a href="https://github.com/v1nizx/dateapp" target="_blank"
-                                        class="project-card__btn" aria-label="Ver código">
+                                        class="project-card__btn" aria-label="Ver repositório no GitHub" title="Ver código">
                                         <i class="fab fa-github"></i>
                                     </a>
                                     <a href="https://dateapp-ochre.vercel.app/" target="_blank"
-                                        class="project-card__btn" aria-label="Ver demo">
+                                        class="project-card__btn" aria-label="Ver demonstração ao vivo" title="Demo ao vivo">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -437,25 +434,28 @@
                         </div>
                         <div class="project-card__content">
                             <h3 class="project-card__title">Date App</h3>
-                            <p class="project-card__description">Uma aplicação web para casais descobrirem lugares especiais para seus encontros! Sem indecisão, sem rotina - apenas experiências incríveis esperando por vocês.</p>
+                            <p class="project-card__description">
+                                Aplicação web pensada para casais descobrirem locais especiais para encontros e experiências gastronômicas com curadoria refinada.
+                            </p>
                             <div class="project-card__tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
                                 <span class="tag">React</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
                             </div>
                         </div>
                     </article>
-                    <article class="project-card" data-category="Typescript">
+
+                    <article class="project-card" data-category="web react">
                         <div class="project-card__image">
                             <img src="assets/img3.png" alt="ComparAuto">
                             <div class="project-card__overlay">
                                 <div class="project-card__actions">
                                     <a href="https://github.com/thera-org/ComparAuto" target="_blank"
-                                        class="project-card__btn" aria-label="Ver código">
+                                        class="project-card__btn" aria-label="Ver repositório no GitHub" title="Ver código">
                                         <i class="fab fa-github"></i>
                                     </a>
                                     <a href="https://comparauto.vercel.app/" target="_blank"
-                                        class="project-card__btn" aria-label="Ver demo">
+                                        class="project-card__btn" aria-label="Ver demonstração ao vivo" title="Demo ao vivo">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
@@ -463,9 +463,11 @@
                         </div>
                         <div class="project-card__content">
                             <h3 class="project-card__title">ComparAuto</h3>
-                            <p class="project-card__description">Uma plataforma moderna para comparar preços de serviços automotivos, conectando clientes a oficinas especializadas.</p>
+                            <p class="project-card__description">
+                                Plataforma moderna de comparação de serviços e cotação automotiva, conectando condutores a oficinas credenciadas em tempo real.
+                            </p>
                             <div class="project-card__tags">
-                                <span class="tag">Typescript</span>
+                                <span class="tag">TypeScript</span>
                                 <span class="tag">React</span>
                                 <span class="tag">Node.js</span>
                             </div>
@@ -475,17 +477,17 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Section (Apple System Sheet Style) -->
         <section class="section contact" id="contact">
             <div class="container">
                 <div class="section__header">
                     <span class="section__tag">Contato</span>
-                    <h2 class="section__title">Vamos <span class="gradient-text">trabalhar juntos?</span></h2>
-                    <p class="section__subtitle">Estou disponível para novos projetos e oportunidades</p>
+                    <h2 class="section__title">Vamos <span class="apple-gradient-text">trabalhar juntos?</span></h2>
+                    <p class="section__subtitle">Aberto para novos desafios, projetos e oportunidades profissionais</p>
                 </div>
                 <div class="contact__wrapper">
                     <div class="contact__info">
-                        <div class="contact__card glass-card">
+                        <div class="contact__card apple-glass">
                             <div class="contact__card-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
@@ -494,17 +496,18 @@
                                 <p>São Luís, Maranhão</p>
                             </div>
                         </div>
-                        <div class="contact__card glass-card">
+
+                        <div class="contact__card apple-glass">
                             <div class="contact__card-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact__card-content">
                                 <h4>Email</h4>
-                                <a
-                                    href="mailto:marcosviniciusmoraisrios117@gmail.com">marcosviniciusmoraisrios117@gmail.com</a>
+                                <a href="mailto:marcosviniciusmoraisrios117@gmail.com">marcosviniciusmoraisrios117@gmail.com</a>
                             </div>
                         </div>
-                        <div class="contact__card glass-card">
+
+                        <div class="contact__card apple-glass">
                             <div class="contact__card-icon">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
@@ -513,28 +516,30 @@
                                 <a href="tel:+5598985718468">(98) 98571-8468</a>
                             </div>
                         </div>
+
                         <div class="contact__social">
-                            <h4>Me siga nas redes</h4>
+                            <h4>Conectar nas redes</h4>
                             <div class="contact__social-links">
                                 <a href="https://github.com/v1nizx" target="_blank" class="social-link"
-                                    aria-label="GitHub">
+                                    aria-label="GitHub" title="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://www.linkedin.com/in/marcos-vinicius-44a011259/" target="_blank"
-                                    class="social-link" aria-label="LinkedIn">
+                                    class="social-link" aria-label="LinkedIn" title="LinkedIn">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
                                 <a href="https://www.instagram.com/viiniciussz._/" target="_blank" class="social-link"
-                                    aria-label="Instagram">
+                                    aria-label="Instagram" title="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <form class="contact__form glass-card" id="contactForm">
+
+                    <form class="contact__form apple-glass" id="contactForm">
                         <div class="form-group">
                             <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
                             <span class="form-group__icon"><i class="fas fa-user"></i></span>
                         </div>
                         <div class="form-group">
@@ -549,7 +554,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem..."
+                            <textarea id="message" name="message" rows="5" placeholder="Descreva sua proposta ou mensagem..."
                                 required></textarea>
                             <span class="form-group__icon"><i class="fas fa-comment-alt"></i></span>
                         </div>
@@ -563,7 +568,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Apple Minimalist Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
@@ -581,13 +586,13 @@
             </div>
             <div class="footer__bottom">
                 <p>&copy; 2026 Marcos Vinicius. Todos os direitos reservados.</p>
-                <p>Feito com <i class="fas fa-heart"></i> e muito <i class="fas fa-coffee"></i></p>
+                <p>Feito com <i class="fas fa-heart"></i> e muito café.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <!-- Back to Top Dynamic Pill -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" title="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
     </button>
 
